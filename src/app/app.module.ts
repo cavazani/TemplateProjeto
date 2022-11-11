@@ -10,6 +10,7 @@ import { HomeComponent } from './navegacao/home/home.component';
 import { FooterComponent } from './navegacao/footer/footer.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { rootRouterConfig } from './app.routes';
+import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { rootRouterConfig } from './app.routes';
     MenuComponent,
     HomeComponent,
     FooterComponent,
-    SobreComponent
+    SobreComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,
