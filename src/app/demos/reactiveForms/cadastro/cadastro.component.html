@@ -8,7 +8,12 @@
                 <label class="col-md-2 control-label" for="nome">Nome Completo</label>
                 <div class="col-md-10">
                     <input class="form-control" id="nome" type="text" placeholder="Nome (requerido)" formControlName="nome" />
+                    <span class="text-danger" *ngIf="cadastroForm.get('nome').errors && (cadastroForm.get('nome').dirty || cadastroForm.get('nome').touched)">
+                        <p>Preencha o campo nome</p>
+                   </span> 
                 </div>
+               
+
             </div>
 
             <div class="form-group">
@@ -41,6 +46,14 @@
             <div class="form-group">
                 <div class="col-md-4 col-md-offset-2">
                     <span><button class="btn btn-success" id="Registrar" type="submit">Registrar</button></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-4 col-md-offset-2">
+                   <p>Formulario valido: {{ cadastroForm.valid}}</p>
+                   <p>Formulario tocado: {{ cadastroForm.touched}}</p>
+                   <p>Formulario sujo: {{ cadastroForm.dirty}}</p>
                 </div>
             </div>
 
