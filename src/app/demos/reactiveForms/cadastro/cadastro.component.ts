@@ -1,6 +1,7 @@
 import { Usuario } from './Models/usuario';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgBrazilValidators } from 'ng-brazil';
 
 @Component({
   selector: 'app-cadastro',
@@ -18,7 +19,7 @@ formResult: string = '';
   ngOnInit() {
     this.cadastroForm = this.fb.group({
       nome: ['', Validators.required],
-      cpf: [''],
+      cpf: ['', [Validators.required, NgBrazilValidators.cpf]],
       email: ['',[Validators.required, Validators.email]],
       senha: [''],
       senhaConfirmacao: ['']
