@@ -12,12 +12,14 @@ import { SobreComponent } from './institucional/sobre/sobre.component';
 import { rootRouterConfig, AppRoutinModule } from './app.routes';
 import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 import { NavegacaoModule } from './navegacao/navegacao.module';
+import { ProdutoDashboardComponent } from './demos/arquitetura-componentes/produto-dashboard/produto-dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SobreComponent,
-    CadastroComponent
+    CadastroComponent,
+    ProdutoDashboardComponent
   ],
   imports: [
     BrowserModule,
