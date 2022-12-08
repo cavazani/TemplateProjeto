@@ -1,4 +1,3 @@
-import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule} from '@angular/router';
 import { HomeComponent } from './navegacao/home/home.component';
@@ -10,7 +9,10 @@ export const rootRouterConfig: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full'},
     { path: 'home', component: HomeComponent},
     { path: 'sobre', component: SobreComponent },
-    { path: 'cadastro', component: CadastroComponent }
+    { path: 'cadastro', component: CadastroComponent },
+    { path: 'produtos', 
+        loadChildren: () => import('./demos/arquitetura-componentes/produto.module')
+        .then(m => m.ProdutoModule)}
 ];
 
 @NgModule({
